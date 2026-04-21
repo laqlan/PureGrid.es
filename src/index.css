@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+body {
+  min-height: 100vh;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+/* Custom animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes neon-energy {
+  0%, 100% { filter: drop-shadow(0 0 2px #00f2ff) brightness(1); opacity: 0.8; }
+  50% { filter: drop-shadow(0 0 10px #00f2ff) brightness(1.3); opacity: 1; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.neon-master {
+  animation: neon-energy 3s ease-in-out infinite, float-gentle 4s ease-in-out infinite;
+}
+
+.neon-path-flow {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: flow 6s linear infinite;
+}
+
+@keyframes flow {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+.neon-graphic-path {
+  stroke-dasharray: 100;
+  animation: flow 6s linear infinite;
+  vector-effect: non-scaling-stroke;
+}
+
+.neon-container-glow {
+  animation: neon-energy 3s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-soft-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.animate-pulse-soft-delay-2 {
+  animation-delay: 0.6s;
+}
+
+.animate-pulse-soft-delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-breathe {
+  animation: breathe 2s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-wave {
+  animation: wave 14s ease-in-out infinite;
+}
+
+.animate-wave-delay {
+  animation: wave 18s ease-in-out infinite reverse;
+}
+
+@keyframes glow-ring {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.animate-glow-ring {
+  animation: glow-ring 6s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
